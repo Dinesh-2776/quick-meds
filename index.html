@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QuickMeds — Online Pharmacy (Student Assignment)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="nav">
+                <div class="brand">
+                    <div class="logo">QM</div>
+                    <div>
+                        <div class="brand-title">QuickMeds</div>
+                        <div class="brand-sub">Fast • Local • Reliable</div>
+                    </div>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#products">Medicines</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="nav-actions">
+                    <button class="pill" id="cartToggle">Cart (0)</button>
+                    <a class="cta" href="#products">Order Now</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="card hero-left">
+                    <h1>Buy medicines online — Quick, safe & verified</h1>
+                    <p class="muted">Search prescriptions, OTC medicines, vitamins and essentials.</p>
+
+                    <div class="search">
+                        <input id="searchInput" placeholder="Search medicines..." />
+                        <button id="searchBtn">Search</button>
+                    </div>
+
+                    <div class="cats">
+                        <button class="cat">All</button>
+                        <button class="cat">Tablets</button>
+                        <button class="cat">Syrups</button>
+                        <button class="cat">Supplements</button>
+                    </div>
+                </div>
+
+                <aside class="sidebar">
+                    <h3>Your Cart</h3>
+
+                    <div id="cartList" class="cart-body">
+                        <div class="muted">Cart is empty</div>
+                    </div>
+
+                    <div class="cart-summary">
+                        <div class="muted">Total:</div>
+                        <div id="cartTotal" class="total">₹0</div>
+                    </div>
+
+                    <button class="btn" id="checkoutBtn">Checkout</button>
+                </aside>
+            </section>
+
+            <section id="products">
+                <h2>Featured Medicines</h2>
+                <div class="grid" id="productGrid"></div>
+            </section>
+
+          <section id="features">
+  <h2>About</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h4>Medicine Browsing</h4>
+      <p class="muted">
+        Users can browse available medicines with price and description.
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>Search Functionality</h4>
+      <p class="muted">
+        Enables users to quickly find medicines using keywords.
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>Cart Management</h4>
+      <p class="muted">
+        Users can add medicines to cart and view total cost dynamically.
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>Contact Module</h4>
+      <p class="muted">
+        Allows users to send queries which are stored on the server.
+      </p>
+    </div>
+  </div>
+</section>
+<section id="about">
+  <div class="card">
+    <h3>About QuickMeds</h3>
+
+    <p class="muted">
+      QuickMeds is a web-based online pharmacy application designed to
+      simplify the process of browsing and ordering medicines digitally.
+      The platform enables users to view available medicines, search for
+      required products, manage a shopping cart, and place demo orders
+      through an intuitive interface.
+    </p>
+
+    <p class="muted">
+      The application follows a client–server architecture. The frontend
+      is built using HTML, CSS, and JavaScript, while the backend is
+      implemented using Node.js to handle server-side processing and data
+      storage.
+    </p>
+
+    <p class="muted">
+      QuickMeds is developed as an academic project to demonstrate
+      frontend–backend integration and modern web development concepts in
+      the healthcare domain.
+    </p>
+  </div>
+</section>
+
+
+
+            <section id="contact">
+                <div class="card">
+                    <h3>Contact</h3>
+                    <form id="contactForm"><br>
+                        <div class="form-row">
+                            <input placeholder="Your name" id="cname" required /><br>
+                            <input placeholder="Email" id="cemail" type="email" required />
+                        </div>
+                        <textarea placeholder="Message" id="cmsg" required></textarea>
+                        <button class="btn" type="submit">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-row">
+                <div class="muted">© 2026 QuickMeds — Demo project</div>
+                <div class="muted">Student assignment only</div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Quick view modal -->
+    <div class="modal" id="modal">
+        <div class="modal-box">
+            <div class="modal-left">
+                <img id="modalImg" src="" alt="product" />
+            </div>
+            <div class="modal-right">
+                <h3 id="modalTitle"></h3>
+                <div id="modalDesc" class="muted"></div>
+                <div id="modalPrice" class="price"></div>
+
+                <div class="modal-actions">
+                    <button class="btn" id="modalAdd">Add to cart</button>
+                    <button class="pill" id="modalClose">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <script src="scripts.js"></script>
+
+</body>
+
+</html>
